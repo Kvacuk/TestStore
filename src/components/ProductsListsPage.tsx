@@ -4,7 +4,7 @@ import { store } from "../Redux/store/store";
 import { IProduct } from "../interfaces/IProduct";
 import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
-import { CardGroup, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 export const ProductsListsPage = () => {
   const products = store.getState().data;
