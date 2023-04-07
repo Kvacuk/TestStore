@@ -17,7 +17,7 @@ export const ProductCard = (props : typeProps) => {
             className="productCard"
             border="0"
           >
-            <Link to="#" style={{ textDecoration: "none" }}>
+            <Link to={`/productDetail/:${product.id}`} style={{ textDecoration: "none" }}>
               <Card.Img variant="top" src={product.image} />
               <Card.Body>
                 <Card.Title className="cardTitle">{product.title}</Card.Title>

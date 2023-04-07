@@ -3,16 +3,14 @@ import { store } from "../Redux/store/store";
 import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
 import { Col, Row } from "react-bootstrap";
-import { fetchProducts } from "../Redux/actions/actions";
+import { fetchProductsAsync } from "../Redux/actions/actions";
 import { IProduct } from "../interfaces/IProduct";
 
 export const ProductsListsPage = () => {
-  const [products, setProducts] = useState<IProduct[]>([])
+  const [products, setProducts] = useState<IProduct[]>(store.getState().data)
 
   useEffect(() => {
-      store.dispatch(fetchProducts())
-      setProducts(store.getState().data)
-      console.log(products)
+      store.dispatch(fetchProductsAsync())
   }, [])
     return (
       <>
