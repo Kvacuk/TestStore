@@ -1,18 +1,18 @@
-import { useEffect } from "react";
-import { fetchProductsAction } from "../Redux/actions/actions";
+import { useEffect, useState } from "react";
 import { store } from "../Redux/store/store";
-import { IProduct } from "../interfaces/IProduct";
 import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
 import { Col, Row } from "react-bootstrap";
+import { fetchProducts } from "../Redux/actions/actions";
+import { IProduct } from "../interfaces/IProduct";
 
 export const ProductsListsPage = () => {
-  const products = store.getState().data;
+  const [products, setProducts] = useState<IProduct[]>([])
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=6')
-            .then(res=>res.json())
-            .then(data=>store.dispatch(fetchProductsAction(data)));
+      store.dispatch(fetchProducts())
+      setProducts(store.getState().data)
+      console.log(products)
   }, [])
     return (
       <>
@@ -26,19 +26,12 @@ export const ProductsListsPage = () => {
           <Row>
             {products.map((product) => {
               return (
-                <Col>
-                  <ProductCard product={product} />
+                <Col >
+                  <ProductCard key={product.id} product={product} />
                 </Col>
               );
             })}
           </Row>
-
-          {/* <ProductCard product={products[1]}/> */}
-          {/* {
-            products.map((product: IProduct) =>{
-              return <h1 key={product.id}>{product.title}</h1>
-            })
-          } */}
         </div>
       </>
     );

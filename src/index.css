@@ -157,6 +157,13 @@ margin-right: auto;
   margin-bottom: 0;
 }
 
+.productCard:hover{
+  background: rgba(255, 255, 255, 0.6);
+border-radius: 4px 4px 0px 0px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .cardTitle {
   text-align: start;
   font-weight: 400;

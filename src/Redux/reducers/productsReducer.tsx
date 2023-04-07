@@ -5,17 +5,16 @@ import { types } from "../actions/types";
 const initialState: IProductState = {
     data : [],
     product : null,
-    counter: 0,
 }
 
 export const productsReducer = (state = initialState, action :any) => {
     switch(action.type) {
-        case types.fetchProduct: 
+        case types.SET_PRODUCT: 
         return {
             ...state,
             product: action.payload
         };
-        case types.fetchProducts:
+        case types.SET_PRODUCTS:
             return {
               ...state,
               data: action.payload,
