@@ -19,6 +19,14 @@ line-height: 40px;
 margin-right: auto;
 }
 
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+.logo a:hover {
+  color: #000000;
+}
+
 .headerPages{
   font-family: 'DM Sans';
   font-weight: 400;
@@ -112,8 +120,11 @@ margin-right: auto;
   font-family: "DM Sans";
 }
 
+.outletLayout{
+  margin: 8vh 0;
+}
+
 .productsListPage{
-  margin: 5rem 0;
   display: block;
   font-family: 'DM Sans';
   font-style: normal;
@@ -146,6 +157,7 @@ margin-right: auto;
   text-align: center;
   border-radius: 8px;
   margin-bottom: 8%;
+  border: none;
 }
 
 .productCard img{
@@ -182,7 +194,36 @@ text-transform: capitalize;
 color: #A18A68;
 }
 
+.imgDetail{
+  display: flex;
+  flex-direction: row;
+}
 
+.extraImgs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.extraImgs img{
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+}
+
+.currentImg img{
+  margin-inline: 5%;
+  width: 540px;
+  height: 600px;
+}
+
+.productDetails{
+  display: flex;
+}
+
+.productInfo{
+  margin-left: 5rem;
+}
 
 
 

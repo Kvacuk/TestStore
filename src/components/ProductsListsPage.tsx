@@ -5,13 +5,15 @@ import { ProductCard } from "./ProductCard";
 import { Col, Row } from "react-bootstrap";
 import { fetchProductsAsync } from "../Redux/actions/actions";
 import { IProduct } from "../interfaces/IProduct";
+import { useDispatch, useSelector } from "react-redux";
 
 export const ProductsListsPage = () => {
-  const [products, setProducts] = useState<IProduct[]>(store.getState().data)
+  const products = useSelector((state:any) => state.products);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-      store.dispatch(fetchProductsAsync())
-  }, [])
+      dispatch(fetchProductsAsync())
+  },[])
     return (
       <>
         <div className="productsListPage">
@@ -22,10 +24,10 @@ export const ProductsListsPage = () => {
             </Link>
           </div>
           <Row>
-            {products.map((product) => {
+            {products.map((product: IProduct) => {
               return (
-                <Col >
-                  <ProductCard key={product.id} product={product} />
+                <Col key={product.id}>
+                  <ProductCard  product={product} />
                 </Col>
               );
             })}

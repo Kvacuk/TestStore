@@ -1,7 +1,7 @@
 import {Routes, Route, Link} from 'react-router-dom'
 import { Layout } from './components/layouts/Layout'
 import { ProductsListsPage } from './components/ProductsListsPage';
-import { ProductDetailPage } from './components/ProductDetailsPage';
+import { ProductDetailPage } from './components/ProductDetails/ProductDetailsPage';
 
 function App() {
   return (

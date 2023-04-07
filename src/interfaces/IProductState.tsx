@@ -1,6 +1,6 @@
 import { IProduct } from "./IProduct";
 
 export interface IProductState {
-    data : IProduct[],
+    products : IProduct[],
     product : IProduct | null,
 }

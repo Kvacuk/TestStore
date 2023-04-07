@@ -3,7 +3,7 @@ import { types } from "../actions/types";
 
 
 const initialState: IProductState = {
-    data : [],
+    products : [],
     product : null,
 }
 
@@ -17,7 +17,7 @@ export const productsReducer = (state = initialState, action :any) => {
         case types.SET_PRODUCTS:
             return {
               ...state,
-              data: action.payload,
+              products: action.payload,
             };
         default: 
         return state;
