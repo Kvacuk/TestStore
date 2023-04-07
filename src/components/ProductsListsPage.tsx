@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { store } from "../Redux/store/store";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
 import { Col, Row } from "react-bootstrap";

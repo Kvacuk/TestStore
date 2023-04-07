@@ -219,11 +219,16 @@ color: #A18A68;
 
 .productDetails{
   display: flex;
+  font-family: "DM Sans";
+  font-style: normal;
 }
 
 .productInfo{
   margin-left: 5rem;
 }
 
-
-
+.productInfoTitle{
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+}

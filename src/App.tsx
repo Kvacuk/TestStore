@@ -1,4 +1,4 @@
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import { Layout } from './components/layouts/Layout'
 import { ProductsListsPage } from './components/ProductsListsPage';
 import { ProductDetailPage } from './components/ProductDetails/ProductDetailsPage';
@@ -9,7 +9,7 @@ function App() {
       <Routes>
       <Route  path='/' element={<Layout/>}>
         <Route index path='/' element={<ProductsListsPage/>}/>
-        <Route path='/productDetail/:id' element={<ProductDetailPage/>}/>
+        <Route path='/:id' element={<ProductDetailPage/>}/>
       </Route>
     </Routes>
     </>
