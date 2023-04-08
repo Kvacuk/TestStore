@@ -219,6 +219,7 @@ color: #A18A68;
 
 .productDetails{
   display: flex;
+  align-content: space-between;
   font-family: "DM Sans";
   font-style: normal;
 }
@@ -231,4 +232,120 @@ color: #A18A68;
   font-weight: 400;
   font-size: 26px;
   line-height: 35px;
+}
+
+.productInfoDiscription{
+font-weight: 400;
+font-size: 16px;
+line-height: 27px;
+color: #707070;
+}
+
+.cartCounter{
+  display: flex;
+  justify-content: space-between;
+  background: #EFEFEF;
+border-radius: 4px;
+width: 100px;
+height: 53px;
+
+}
+
+.cartCounter input{
+  border: none;
+  width: 60%;
+  text-align: center;
+  background: #EFEFEF;
+  color: #707070;
+  align-self: center;
+  font-weight: 400;
+font-size: 16px;
+line-height: 27px
+}
+
+.cartCounter button{
+  border-radius: 4px;
+  border: none;
+  color: #707070;
+}
+
+.addToCart{
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addToCart >  button{
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  width: 360px;
+  height: 53px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.infoIconsBar{
+  margin-block: 82px;
+  height: 30px;
+}
+
+.infoIconsBar img{
+  width: 25px;
+  height: 25px;
+}
+
+.infoIconsBar .vr{
+  margin: 0 25px 0 10%;
+  height: inherit;
+  vertical-align: middle;
+}
+.infoIconsBar a:not(:first-child) {
+    margin-left: 6%;
+}
+
+.infoCategory{
+  margin-top: 40px;
+}
+.infoCategory p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.infoCategory b{
+  margin-right: 2rem;
+  color: #000000;
+}
+
+.detailTab {
+  margin-top: 5rem;
+}
+
+.underLine{
+  position: absolute;
+  bottom: 3px;
+  height: 2px;
+  background: #000000;
+  transition: all ease 0.2s;
+}
+
+.tab-item{
+  flex-grow: 1;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.similarItems{
+  margin-top: 5rem;
+}
+
+.similarItems p {
+  font-weight: 400;
+font-size: 26px;
+line-height: 35px;
 }

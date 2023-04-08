@@ -13,7 +13,7 @@ export const RatePanel = (props: typeProps) => {
             <p className="productInfoTitle">{product?.title}</p>
             <p className="cardPrice">$ {product?.price}</p>
             <RatingBar/>
-            
+            <p className="productInfoDiscription">{product?.description}</p>
         </div>
     )
 }

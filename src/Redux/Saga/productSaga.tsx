@@ -4,16 +4,20 @@ import { setProducts, setProduct } from '../actions/actions';
 import { types } from '../actions/types';
 
 const fetchProductsFromApi = () => fetch('https://fakestoreapi.com/products?limit=6')
-                                    .then(res=>res.json());
+                                    .then(res=>res.json())
+                                    .catch(err => console.error(err));
+
 const fetchProductFromApi = (id: number) => fetch(`https://fakestoreapi.com/products/${2}`)
-                                     .then(res => res.json());
+                                    .then(res => res.json())
+                                    .catch(err => console.error(err));
 
 function* fetchProductsWorker () {
     const data: IProduct[] = yield call(fetchProductsFromApi);
     yield put(setProducts(data))
 }
 
-function* fetchProductWorker (id:number) {
+function* fetchProductWorker (action: any) {
+    const id = action.payload;
     const data: IProduct = yield call(fetchProductFromApi, id);
     yield put(setProduct(data))
 }
