@@ -17,7 +17,7 @@ export const ProductCard = (props : typeProps) => {
             className="productCard"
             border="0"
           >
-            <Link to={`/${product.id}`} style={{ textDecoration: "none" }}>
+            <Link to={`/${product.id}`} onClick={()=>window.scrollTo(0, 0)} style={{ textDecoration: "none" }}>
               <Card.Img variant="top" src={product.image} />
               <Card.Body>
                 <Card.Title className="cardTitle">{product.title}</Card.Title>

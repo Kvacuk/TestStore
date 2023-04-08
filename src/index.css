@@ -277,9 +277,10 @@ line-height: 27px
 
 .addToCart >  button{
   background: #FFFFFF;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   border-radius: 4px;
-  width: 360px;
+  width: 85%;
+  margin-left: 10%;
   height: 53px;
   font-weight: 700;
   font-size: 16px;
