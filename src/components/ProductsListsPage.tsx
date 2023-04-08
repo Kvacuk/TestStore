@@ -22,7 +22,7 @@ export const ProductsListsPage = () => {
               View All
             </Link>
           </div>
-          <Row>
+          <Row lg={3}>
             {products.map((product: IProduct) => {
               return (
                 <Col key={product.id}>
