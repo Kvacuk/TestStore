@@ -5,13 +5,11 @@ type propsType = {
   product: IProduct
 }
 
-
-
 export const DetailTabs =(props: propsType)=> {
   const items = [
     {
       head: "Description",
-      value: props.product.description,
+      value: props.product?.description,
     },
     {
       head: "Aditional information",
@@ -48,8 +46,7 @@ export const DetailTabs =(props: propsType)=> {
     for(let i = 0; i < index; i++) {
       distance += headStrings[i].length + 3;
     }
-    console.log(distance);
-    return distance
+    return distance;
   }
   
     return (

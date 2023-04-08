@@ -326,7 +326,7 @@ line-height: 27px
 
 .underLine{
   position: absolute;
-  bottom: 3px;
+  bottom: 1%;
   height: 2px;
   background: #000000;
   transition: all ease 0.2s;

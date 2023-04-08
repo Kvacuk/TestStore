@@ -12,7 +12,7 @@ const firstThreeProducts = products.slice(0,3);
         <p>Similar Items</p>
         <Row>
           {firstThreeProducts.map((product: IProduct) => {
-            return <Col><ProductCard product={product} /></Col>;
+            return <Col key={product.id}><ProductCard product={product} /></Col>;
           })}
         </Row>
       </div>

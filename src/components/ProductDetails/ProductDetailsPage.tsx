@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { fetchProductAsync } from "../../Redux/actions/actions";
 import { useParams } from "react-router-dom";
 import { ImageDetial } from "./ImageDetail";
@@ -9,14 +9,14 @@ import { SimilarItems } from "./SimilarItems";
 
 export const ProductDetailPage =() => {
     const {id} = useParams();
-    const product = useSelector((state: any) =>state.product);
     const dispatch = useDispatch();
+    const product = useSelector((state: any) =>state.product);
 
     useEffect(() => {
           if(id !== undefined) {
-            dispatch(fetchProductAsync(parseInt(id)))
+            dispatch(fetchProductAsync(parseInt(id)));
           }
-      }, [id]);
+      }, [id, dispatch]);
 
     return (
       <div>

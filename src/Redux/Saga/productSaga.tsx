@@ -7,7 +7,7 @@ const fetchProductsFromApi = () => fetch('https://fakestoreapi.com/products?limi
                                     .then(res=>res.json())
                                     .catch(err => console.error(err));
 
-const fetchProductFromApi = (id: number) => fetch(`https://fakestoreapi.com/products/${2}`)
+const fetchProductFromApi = (id: number) => fetch(`https://fakestoreapi.com/products/${id}`)
                                     .then(res => res.json())
                                     .catch(err => console.error(err));
 
@@ -17,13 +17,11 @@ function* fetchProductsWorker () {
 }
 
 function* fetchProductWorker (action: any) {
-    const id = action.payload;
-    const data: IProduct = yield call(fetchProductFromApi, id);
-    yield put(setProduct(data))
+  const data: IProduct = yield call(fetchProductFromApi, action.payload);
+  yield put(setProduct(data));
 }
-
 
 export function* productWatcher(){
     yield takeEvery(types.FETCH_PRODUCTS_ASYNC, fetchProductsWorker);
-    yield takeEvery(types.FETCH_PRODUCT_ASYNC as any, fetchProductWorker);
+    yield takeEvery(types.FETCH_PRODUCT_ASYNC, fetchProductWorker);
 }
